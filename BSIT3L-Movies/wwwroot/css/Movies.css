@@ -1,0 +1,118 @@
+﻿
+.checked {
+    color: orange;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+   margin-bottom:50px;
+}
+
+.card {
+    height: 360px;
+    width: 200px;
+    margin: 10px;
+    position: relative;
+    transition: opacity 0.3s;
+}
+
+    .card .pic {
+        height: 70%;
+    }
+
+        .card .pic img {
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+        }
+
+    .card .content {
+        padding: 5px;
+    }
+
+        .card .content h2 {
+            font-size: 18px;
+            width: 100%;
+        }
+
+        .card .content span {
+            font-size: 18px;
+        }
+
+        .card .content p {
+            font-size: 15px;
+            width: 100%;
+        }
+    .card:hover .pic {
+        opacity: 0.3;
+    }
+
+.card .hover-button {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+    opacity:0;
+    text-decoration:none;
+}
+
+.card:hover  .hover-button {
+    display: block;
+    z-index: 2;
+    opacity:1;
+}
+.hover-button:hover{
+    background-color:#00c1ff;
+    color:#000;
+}
+/*table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+   
+}
+table thead tr th {
+    text-align:center;
+    padding:10px;
+    color:black;
+    border:1px solid black;
+}
+table tr{
+    text-align:center;
+}
+    table td, table th {
+        border: 1px solid #ddd;
+        padding: 10px;
+      
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+        background-color: #4afac4;
+    }
+
+    table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #11ebca;
+        color: white;
+    }
+*/
