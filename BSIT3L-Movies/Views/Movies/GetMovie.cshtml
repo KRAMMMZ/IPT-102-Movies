@@ -5,13 +5,44 @@
 <html>
 <head>
     <title>Movie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/details.css" />
 </head>
 <body>
-    <h2>Movie Details</h2>
+
+    <div class="container">
+        <div class="details">
+            <div class="card-img">
+                <img src ="@Url.Content(Model.logo)" alt="LUFFY">
+                <h1>@Model.Id</h1>
+            </div>
+            <div class="card-details">
+                <h2>  @Model.Name ( @Model.ReleaseYear ) </h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star  checked"></span>
+                <span class="fa fa-star  checked"></span>
+                <span> @Model.Rating </span>
+                <h3>  @Model.Genre</h3>
+                <hr>
+                <p class="movie-detail">@Model.details</p>
+                <hr>
+                <a href="@Url.Content(Model.link)" class="button-link"> Watch Now</a>
+               
+            </div>
+        </div>
+    </div>
+
+
+
+   @*  <h2>Movie Details</h2>
+    <img src="@Url.Content(Model.logo)" width="150" height="150" />
     <p>Movie ID: @Model.Id</p>
+
     <p>Movie Name: @Model.Name</p>
     <p>Rating: @Model.Rating</p>
     <p>Release Year: @Model.ReleaseYear</p>
-    <p>Genre: @Model.Genre</p>
+    <p>Genre: @Model.Genre</p> *@
 </body>
 </html>
