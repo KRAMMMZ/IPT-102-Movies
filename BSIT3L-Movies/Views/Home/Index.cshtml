@@ -4,8 +4,34 @@
     ViewData["Title"] = "Home Page";
 }
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/Movies.css" />
 
-<table>
+<div class="container">
+      @foreach (var movie in Model)
+        {
+        <div class="card" href="/movies/getmovie/@movie.Id">
+                  <div class="pic">
+                <img src="@Url.Content(movie.logo)" alt="PIC">
+                 </div>
+             <div class="content">
+                <h2> @movie.Name ( @movie.ReleaseYear )</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                <span class="fa fa-star  checked"></span>
+                <span class="fa fa-star  checked"></span>
+                <span>@movie.Rating</span>
+                <p> @movie.Genre</p>
+               
+              </div>
+            <a class="hover-button" href="/movies/getmovie/@movie.Id"> WATCH </a>
+          </div>
+      
+        }
+</div>
+
+@* <table>
     <thead>
         <tr>
             <th>ID</th>
@@ -20,7 +46,7 @@
         {
             <tr>
                 <td>@movie.Id</td>
-                <td ><a href = "/movies/getmovie/@movie.Id" > @movie.Name </a></td>
+                <td ><a href = "/movies/getmovie/@movie.Id" > @movie.Name </td>
                 <td>@movie.Rating</td>
                 <td>@movie.ReleaseYear</td>
                 <td>@movie.Genre</td>
@@ -28,4 +54,4 @@
         }
     </tbody>
 </table>
-
+ *@
